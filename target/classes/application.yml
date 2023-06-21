@@ -1,0 +1,37 @@
+spring:
+  datasource:
+    url: jdbc:mysql://190.15.198.27:15000/reporte?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL57InnoDBDialect
+    open-in-view: true
+    hibernate:
+      ddl-auto: update
+  devtools:
+    livereload:
+      enabled: true
+    add-properties: true
+
+server:
+  port: 7070
+
+logging:
+  level:
+    web: debug
+    org:
+      hibernate:
+        SQL: debug
+
+loggin:
+  user: "nahue_marcos"
+  pass: "Nahue_Marcos"
+  url: "http://10.101.102.1:8080"
+  urlreporte: "http://127.0.0.1:7070"
+  urlventas: "http://127.0.0.1:7071"
+
+consulta:
+  accion: "consulta"
+  uuid: "5d73ab28-db0d-4813-8b8c-03643be194af"
+
