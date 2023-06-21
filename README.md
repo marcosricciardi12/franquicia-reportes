@@ -1,0 +1,4 @@
+# Proyecto `franquicia-reportes`
+Este servicio se encarga de gestionar los reportes solicitados por el servidor principal. A su vez, el servicio de ventas cuando recibe la acción de crear reportes, este llama a este servicio, enviando los parametros solicitados.
+En el caso de un reporte historico, se enviarán todas las ventas hasta la fecha.
+Cuando se trata de reportes recurrentes, el servicio corre en segundo plano tantos procesos como reportes recurrentes estén siendo solicitados, ya que estos son enviados cada cierto tiempo, con una fecha de inicio y una fecha de fin. Cada vez que el servicio se inicia, debe verificar los reportes recurrentes solicitados, y si las fechas de ejecución son válidas, se deben enviar los reportes recurrentes con las ventas del periodo de tiempo especificado.
